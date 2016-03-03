@@ -23,6 +23,12 @@ class TestISBNKata <Minitest::Test
 		assert_equal(false, valid_isbn?("1234 5678 "))
 	end	
 
+	def test_valid_hyphens_returns_true
+		assert_equal(true, valid_isbn?("047-19-586-97"))
+	end	
 
+	def test_valid_hyphens__and_spaces_return_true
+	 	assert_equal(true, valid_isbn?("0 47-19-5 86-97"))
+	end	
 
 end	
