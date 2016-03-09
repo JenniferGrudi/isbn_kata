@@ -38,5 +38,10 @@ class TestISBNKata <Minitest::Test
 	def test_for_check_digit_10
 		assert_equal(true, check_digit_10?("877195869x"))
 	end	
-		
+
+	def test_for_check_digit_13
+		assert_equal(true, check_digit_13?("9780470059029"))
+	end	
+
+
 end	

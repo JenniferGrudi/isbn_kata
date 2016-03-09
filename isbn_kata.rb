@@ -40,5 +40,34 @@ def check_digit_10?(isbn_input)
  	elsif 
  	 false
  	end 
-
 end	
+
+def check_digit_13?(isbn_input)
+ array = []		
+ isbn_13_array = isbn_input.split(//,)
+ isbn_13_array.each do |value|
+ 	array << value.to_i
+ end
+
+ sum = 0
+ array.each_with_index do |value, index|
+ 	break if index == 12
+ 	if sum += value * 1
+ 	else 
+		sum += value * 3	 		
+ 	end	
+
+ end
+
+ checksum_13 = sum%10 
+ check_digit = 10 - checksum_13
+ sum = check_digit%10
+
+ isbn_input[12].to_i == check_digit
+
+
+end 
+
+
+
+		
