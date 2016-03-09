@@ -13,7 +13,32 @@ def contains_X(isbn_input)
 
 	if isbn_array[9] == "x" || isbn_array[9] == "X"
 		isbn_array[9] == 10
+		true
+	else
+		false	
 	end
 	isbn_array		
 end	
 
+def check_digit_10?(isbn_input)
+ array = []
+ isbn = contains_X(isbn_input)
+	isbn.each do |value|
+	array << value.to_i	
+	end
+
+ sum = 0
+ array.each_with_index do |value, index|
+ 	break if index == 9
+ 	sum += value *(index + 1) #value*index + 1
+ end
+
+ checksum = sum%11
+
+ 	if checksum == 10 && isbn_input[9] =="X" || isbn_input[9] == "x"
+ 	 true
+ 	elsif 
+ 	 false
+ 	end 
+
+end	

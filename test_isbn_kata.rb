@@ -34,5 +34,9 @@ class TestISBNKata <Minitest::Test
 	def test_if_it_ends_in_X_will_equal_10
 	 	assert_equal(true, valid_isbn?("877195869x"))
 	end 
+
+	def test_for_check_digit_10
+		assert_equal(true, check_digit_10?("877195869x"))
+	end	
 		
 end	
