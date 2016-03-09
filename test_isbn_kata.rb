@@ -15,8 +15,8 @@ class TestISBNKata <Minitest::Test
 	end	
 
 	def test_valid_10_isbn_number_with_spaces_is_valid
-		assert_equal(true, valid_isbn?("047 19 586 97"))
 		assert_equal(true, valid_isbn?("0 4719586 97"))
+		assert_equal(true, valid_isbn?("047 19 586 97"))
 	end	
 
 	def test_spaces_do_not_add_to_string_lenght
@@ -31,4 +31,8 @@ class TestISBNKata <Minitest::Test
 	 	assert_equal(true, valid_isbn?("0 47-19-5 86-97"))
 	end	
 
+	def test_if_it_ends_in_X_will_equal_10
+	 	assert_equal(true, valid_isbn?("877195869x"))
+	end 
+		
 end	
