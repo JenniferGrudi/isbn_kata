@@ -41,7 +41,7 @@ class TestISBNKata <Minitest::Test
 
 	def test_for_check_digit_13
 		assert_equal(true, check_digit_13?("9780470059029"))
+		assert_equal(false, check_digit_13?("97804700059029"))
 	end	
-
 
 end	
